@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>27bfa8d4-a5bc-49e8-bcb3-dbc0f91ff3c8</UserSecretsId>
+
+    <!-- tập tin chỉ thị các trình biên dịch để tạo ra một tập tin tài liệu XML
+    dựa trên ý kiến XML và bỏ qua các cảnh báo do các loại công và các thành viên cung cấp tài liệu -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Simple .NET logging with fully-structured events https://www.nuget.org/packages?q=Serilog -->
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Filters.Expressions" Version="2.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    
+    <!-- Swagger tools for documenting APIs built on ASP.NET Core. -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+
+    <!-- The official MongoDB C#/.NET Driver provides asynchronous interaction with MongoDB. -->
+    <PackageReference Include="MongoDB.Driver" Version="2.11.6" />
+
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" /> <!-- AutoMapper extensions for ASP.NET Core -->
+    <PackageReference Include="AutoMapper" Version="10.1.1" /> <!-- A convention-based object-object mapper. -->
+    
+    <PackageReference Include="Berrysoft.XXTea" Version="4.0.9" /> <!-- A .NET implementation of TEA, XTEA and XXTEA algorithm. -->
+
+    <!-- A MongoDb UserStore and RoleStore adapter for Microsoft.Extensions.Identity -->
+    <PackageReference Include="AspNetCore.Identity.MongoDbCore" Version="2.1.1" />
+
+    <!-- ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token. -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.5" />
+    
+    <!-- Includes types that provide support for creating, serializing and validating JSON Web Tokens. -->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.0" />
+
+  </ItemGroup>
+
+</Project>
